@@ -1,0 +1,1002 @@
+:root {
+    --bs-blue: #0d6efd;
+    --bs-red: #dc3545;
+    --bs-white: #fff;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-light: #f8f9fa;
+    --bs-dark: #081828;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --transition: 0.3s all;
+    --border-radius: 6px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    scroll-behavior: smooth;
+}
+
+p{
+    letter-spacing: 1.05px;
+}
+
+.fa-arrow-up{
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    background: var(--bs-red);
+    color: var(--bs-white);
+    border: 2px solid var(--bs-white);
+    border-radius: var(--border-radius);
+    padding: 6px 12px;
+    cursor: pointer;
+    z-index: 999;
+    display: none;
+}
+
+/*+++++++++++++++++++++++++++++++++++++ Start NavBar ++++++++++++++++++++++++++++++++++++*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+    width: 100%;
+    padding: 0 20px;
+    background: var(--bs-red);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+header  img{
+    width: 160px;
+}
+
+header ul{
+    display: flex;
+}
+
+header ul li{
+    margin-right: 25px;
+    list-style: none;
+}
+
+header ul li  a{
+    text-decoration: none;
+    color: var(--bs-light);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+header div{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+header button{
+    padding: 12px 30px;
+    border: 2px solid var(--bs-light);
+    border-radius: var(--border-radius);
+    color: var(--bs-white);
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+header button:hover{
+    background: var(--bs-light);
+    color: var(--bs-red);
+}
+
+header .fa-bars{
+    color: var(--bs-light);
+    cursor: pointer;
+    display: none;
+}
+
+header .Link.Mobile{
+    left: 20px;
+}
+
+@media screen and (max-width:950px) {
+    
+    header .fa-bars{
+        display: block;
+    }
+
+    header .Link{
+        display: block;
+        background: var(--bs-dark);
+        padding: 20px ;
+        width: 90%;
+        z-index: 99;
+        border-radius: var(--border-radius);
+        position: absolute;
+        top: 70px;
+        left: -2000px;
+    }
+
+    header ul li{
+        margin-top: 25px;
+    }
+}
+
+@media screen and (max-width:470px) {
+    header button{
+        display: none;
+    }
+}
+
+/*+++++++++++++++++++++++++++++++++++++ End NavBar ++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++ Start Home ++++++++++++++++++++++++++++++++++++*/
+
+.Home{
+    background: var(--bs-red);
+    color: var(--bs-light);
+}
+
+.Home-Container{
+    padding: 150px 20px 170px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Home-Left{
+    display: 1;
+}
+
+.Home-Left h1{
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.Home-Left p{
+    margin-bottom: 20px;
+}
+
+.Home-Left div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.Home-Left div button{
+    padding: 12px 35px;
+    display: flex;
+    gap: 10px;
+    background: transparent;
+    color: var(--bs-light);
+    border: 2px solid var(--bs-white);
+    border-radius: var(--border-radius);
+    font-size: 18px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.Home-Left div button:hover{
+    color: var(--bs-red);
+    background: var(--bs-light); 
+
+}
+
+.Home-Left div .AppStore{
+    color: var(--bs-red);
+    background: var(--bs-light); 
+}
+
+.Home-Left div .AppStore:hover{
+    background: var(--bs-dark);
+    color: var(--bs-light);
+    border: 2px solid var(--bs-dark);
+}
+
+.Home-Right{
+    width: 30rem;
+}
+
+.Home-Right img{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width:800px) {
+    
+    .Home-Container{
+        flex-direction: column;
+    }
+
+    .Home-Left{
+        width: 90%;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .Home-Left h1{
+        margin-bottom: 20px;
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width:490px) {
+    .Home-Left div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Home-Left div button{
+        width: 250px;
+    }
+ 
+    .Home-Right{
+        width: 23rem;
+    }
+   
+}
+
+/*+++++++++++++++++++++++++++++++++++++ End Home ++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++ Start Feature ++++++++++++++++++++++++++++++++++++*/
+
+.Feature{
+    margin-top: 100px;
+}
+
+.Main-Top{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto 50px auto;
+}
+.Top{
+    text-align: center;
+    color: var(--bs-red);
+    text-transform: uppercase;
+}
+.Bottom{
+    text-align: center;
+    color: var(--bs-dark);
+}
+.Paragraph{
+    text-align: center;
+    color: var(--bs-gray-dark);
+}
+
+.Feature-Bottom{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.Feature-Bottom-Cart{
+    width: 300px;
+    border: 1px solid #eee;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.Feature-Bottom-Cart:hover{
+    transform: translateY(-10px);
+    box-shadow: 1px 1px 10px -2px rgba(0,0,0,0.75);
+}
+
+
+.Feature-Bottom-Cart i{
+    padding: 12px 25px;
+    background: var(--bs-red);
+    color: var(--bs-light);
+    margin-bottom: 20px;
+    border-radius: var(--border-radius);
+}
+
+.Feature-Bottom-Cart h4{
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #081828;
+    font-weight: 500;
+}
+
+.Feature-Bottom-Cart p{
+    line-height: 22px;
+    font-size: 15px;
+    color: var(--bs-secondary);
+}
+
+/*+++++++++++++++++++++++++++++++++++++ End Feature ++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++ Start OverView ++++++++++++++++++++++++++++++++++++*/
+
+.Overview{
+    margin: 100px 0;
+}
+
+.Overview-Content{
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.Overview-Content-Left{
+    width: 50%;
+}
+
+.Overview-Content-Left i{
+    padding: 12px 25px;
+    background: var(--bs-red);
+    color: var(--bs-light);
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+.Overview-Content-Left h2{
+    color: #081828;
+    margin-bottom: 20px;
+    letter-spacing: 1.05px;
+}
+
+.Overview-Content-Left p{
+    line-height: 22px;
+    font-size: 15px;
+    color: var(--bs-secondary);
+    margin-bottom: 20px;
+}
+
+.Overview-Content-Left button{
+    padding: 12px 25px;
+    background: var(--bs-red);
+    color: var(--bs-light);
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: var(--transition);
+}
+
+.Overview-Content-Left button:hover{
+    background: var(--bs-dark);
+    color: var(--bs-light);
+}
+
+.Overview-Content-Right{
+    width: 35rem;
+}
+
+.Overview-Content-Right img{
+    width: 100%;
+}
+
+.Content2{
+    margin-top: 80px;
+}
+
+@media screen and (max-width:815px) {
+    .Overview-Content{
+       flex-direction: column;
+    }
+    
+    .Overview-Content-Left{
+        width: 90%;
+        text-align: center;
+    }
+    
+    .Overview-Content-Right{
+        width: 32rem;
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width:525px) {
+
+    .Overview-Content-Right{
+        width: 95%;
+    }
+}
+
+/*+++++++++++++++++++++++++++++++++++++ End OverView ++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++ Start User ++++++++++++++++++++++++++++++++++++*/
+
+.User{
+    margin-top: 100px;
+    background: var(--bs-red);
+    color: var(--bs-light);
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+}
+
+.User h1{
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.User  p{
+    margin-bottom: 20px;
+}
+
+.User-Num{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.User-Num-Cart{
+    margin-right: 30px;
+    
+}
+
+.User-Num-Cart h3{
+    letter-spacing: 1.05px;
+}
+
+
+@media screen and (max-width:728px) {
+    .User-Num{
+       flex-direction: column;
+       gap: 30px;
+    }
+    
+}
+
+/*+++++++++++++++++++++++++++++++++++++ End User ++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++ Start Pricing ++++++++++++++++++++++++++++++++++++*/
+
+.Pricing{
+    margin-top: 100px;
+}
+
+.Pricing-Bottom{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+}
+
+.Pricing-Cart{
+   border: 1px solid #eee;
+   padding: 20px;
+   margin: 10px ;
+   transition: var(--transition);
+}
+
+.Pricing-Cart:hover{
+    transform: translateY(-10px);
+    box-shadow: 1px 1px 10px -2px rgba(0,0,0,0.75);
+}
+
+.Pricing-Cart-Top h3{
+    color: #081828;
+    margin-bottom: 20px;
+}
+
+.Pricing-Cart-Top{
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+}
+
+.Pricing-Cart-Top p{
+    color: var(--bs-secondary);
+    margin-bottom: 20px;
+}
+
+.Pricing-Cart-Top h2{
+    color: var(--bs-dark);
+    margin-bottom: 20px;
+}
+
+.Pricing-Cart-Top h2 span{
+    color: var(--bs-secondary);
+    font-size: 16px;
+}
+
+.Pricing-Cart-Top button{
+    width: 100%;
+    height: 35px;
+    background: var(--bs-dark);
+    color: var(--bs-white);
+    border: none;
+    font-size: 18px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.Pricing-Cart-Top button:hover{
+    background: var(--bs-red);
+}
+
+.Pricing-Cart-Bottom{
+    padding: 20px 0;
+}
+.Pricing-Cart-Bottom h4{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.Pricing-Cart-Bottom ul li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--bs-secondary);
+    margin-top: 15px;
+}
+
+@media screen and (max-width:850px) {
+    .Pricing-Bottom{
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .Pricing-Bottom{
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+    }
+    
+.Pricing-Cart{
+    width: 80%;
+    margin: 10px auto;
+ }
+}
+
+/*+++++++++++++++++++++++++++++++++++++ End Pricing ++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++ Start Team ++++++++++++++++++++++++++++++++++++*/
+
+.Team{
+    margin-top: 100px;
+}
+
+.Team-Nottom{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.Team-Cart{
+    border: 1px solid #eee;
+    border-radius: var(--border-radius);
+    margin: 10px auto;
+    width: 300px;
+    transition: var(--transition);
+}
+
+.Team-Cart:hover{
+    transform: translateY(-10px);
+    box-shadow: 1px 1px 10px -2px rgba(0,0,0,0.75);
+}
+
+.Team-Cart img{
+    width: 100%;
+}
+
+.Team-Cart div{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 10px 30px;
+}
+
+.Team-Cart div span{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: var(--bs-secondary);
+}
+
+.Team-Cart p{
+    padding: 0px 30px 10px ;
+    color: var(--bs-secondary);
+}
+
+/*+++++++++++++++++++++++++++++++++++++ End Pricing ++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++ Start Testimonial ++++++++++++++++++++++++++++++++++++*/
+
+.Testimonial{
+    margin-top: 100px;
+    background: var(--bs-light);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.Testimonial-Content{
+    text-align: center;
+}
+
+.Testimonial-Person{
+    width: 70px;
+    border-radius: 50%;
+}
+
+.Testimonial-Brand{
+    margin-bottom: 20px;
+    width: 150px;
+}
+
+.Testimonial-Content p{
+    width: 50%;   
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.Testimonial-Content h5{
+    color: var(--bs-secondary);
+    margin-top: 5px;
+}
+
+.Patern-Top{
+    position: absolute;
+    top: -5px;
+    right: -80px;
+    width: 200px;
+}
+
+.Patern-Bottom{
+    position: absolute;
+    bottom: -5px;
+    left: -80px;
+    width: 200px;
+}
+
+@media screen and (max-width:500px) {
+    .Patern-Top{
+        width: 150px;
+    }
+    .Patern-Bottom{
+        width: 150px;
+    }
+    .Testimonial-Content p{
+        width: 80%;   
+    }
+}
+
+/*+++++++++++++++++++++++++++++++++++++ End Testimonial ++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++ Start Install ++++++++++++++++++++++++++++++++++++*/
+
+.Install{
+    margin-top: 100px;
+    background: var(--bs-red);
+    color: var(--bs-light);
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+}
+
+
+.Install h1{
+    margin-bottom: 20px;
+    font-size: 40px;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.Install  p{
+    margin-bottom: 20px; 
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.Install div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Install div button{
+    padding: 12px 35px;
+    display: flex;
+    gap: 10px;
+    background: transparent;
+    color: var(--bs-light);
+    border: 2px solid var(--bs-white);
+    border-radius: var(--border-radius);
+    font-size: 18px;
+    cursor: pointer;
+    transition: var(--transition);
+    margin: 10px;
+}
+
+.Install div button:hover{
+    color: var(--bs-red);
+    background: var(--bs-light); 
+}
+
+.Install div .AppStore{
+    color: var(--bs-red);
+    background: var(--bs-light); 
+}
+
+.Install div .AppStore:hover{
+    background: var(--bs-dark);
+    color: var(--bs-light);
+    border: 2px solid var(--bs-dark);
+}
+
+@media screen and (max-width:490px) {
+    .Install div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Install div button{
+        width: 250px;
+    }
+ 
+   
+}
+
+/*+++++++++++++++++++++++++++++++++++++ End Install ++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++ Start Blogs ++++++++++++++++++++++++++++++++++++*/
+
+.Blogs{
+    margin-top: 100px;
+}
+
+.Blog-Bottom{
+    margin: 50px auto 0 auto;
+    background: var(--bs-light);
+    width: 95%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.Blog-Bottom-Cart{
+    border: 1px solid #eee;
+    border-radius: var(--border-radius);
+    margin: 10px auto;
+    width: 280px;
+    transition: var(--transition);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 1px 1px 10px -2px rgba(0,0,0,0.75);
+}
+
+.Blog-Bottom-Cart:hover  .Blog-Img{
+    transform: scale(1.1);
+}
+
+.Blog-Bottom-Cart img{
+    width: 100%;
+    height: 100%;
+    border-radius: 6px 6px 0 0;
+    transition: var(--transition);
+}
+
+.Blog-Imgg{
+    overflow: hidden;
+    height: 170px;
+}
+
+.Blog-Bottom-Cart-Content{
+    padding: 20px;
+}
+
+.Blog-Bottom-Cart-Content h5{
+    color: var(--bs-red);
+    margin-bottom: 10px;
+}
+.Blog-Bottom-Cart-Content h3{
+    color: var(--bs-dark);
+    margin-bottom: 20px;
+}
+.Blog-Bottom-Cart-Content p{
+    color: var(--bs-secondary);
+}
+
+.Blog-Bottom-Cart-Bottom{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    color: var(--bs-secondary);
+}
+
+.Blog-Bottom-Cart-Bottom img{
+    width: 42px;
+    border-radius: 50%;
+}
+
+
+
+
+/*+++++++++++++++++++++++++++++++++++++ End Blogs ++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++ Start Footer ++++++++++++++++++++++++++++++++++++*/
+
+footer{
+    margin-top: 100px;
+    background: var(--bs-dark);
+}
+
+.Footer-Container{
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    color: #D2D6DC;
+}
+
+/* Footer Top */
+
+.Footer-Top{
+    display: flex;
+    gap: 20px;
+}
+
+
+.Footer-Top-Left{
+    flex: 1;
+}
+
+.Footer-Top-Left p{
+    margin-bottom: 20px;
+}
+
+.Footer-Social{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.Footer-Social i{
+    cursor: pointer;
+}
+
+.Footer-Social i:hover{
+    color: var(--bs-red);
+}
+
+.Footer-Top-Right{
+    flex:2;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.Footer-Top-Right div h2{
+    margin-bottom: 20px;
+}
+
+.Footer-Top-Right div ul li{
+    list-style: none;
+    margin-top: 10px;
+}
+
+.Footer-Top-Right div ul li a{
+    color: #D2D6DC;
+    text-decoration: none;
+}
+
+.Footer-Top-Right div ul li a:hover{
+    color: var(--bs-red);
+}
+
+
+@media screen and (max-width:880px) {
+    .Footer-Top-Right{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .Footer-Top-Right div {
+        margin-bottom: 30px;
+        margin-left:auto ;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width:680px) {
+    
+    .Footer-Top{
+        flex-direction: column;
+    }
+    
+    
+    .Footer-Top-Left{
+        text-align: center;
+    }
+
+    .Footer-Top-Right{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .Footer-Social {
+        width: 150px;
+        margin: 20px auto;
+    }
+    .Footer-Social i{
+        margin: 0 auto;
+    }
+}
+
+/* Footer Bottom */
+
+.Footer-Bottom{
+    border: 2px solid var(--bs-secondary);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: var(--border-radius);
+}
+
+.Footer-Bottom-Content p{
+    margin: 20px 0;
+    width: 80%;
+}
+
+.Footer-Bottom input{
+    width: 40%;
+    height: 40px;
+    border-radius:var(--border-radius);
+    outline: none;
+    padding: 0 20px;
+    color: var(--bs-light);
+    background: var(--bs-secondary);
+    border: none;
+    
+}
+.Footer-Bottom input::placeholder{
+    letter-spacing: 1.2px;
+}
+.Footer-Bottom button{
+    padding: 0px 30px;
+    margin-left: 20px;
+    height: 40px;
+    border: none;
+    border-radius: var(--border-radius);
+    background: var(--bs-red);
+    color: var(--bs-white);
+    font-size: 18px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.Footer-Bottom button:hover{
+    color: var(--bs-red);
+    background: var(--bs-white);
+}
+
+@media screen and (max-width:850px) {
+    .Footer-Bottom{
+        flex-direction: column;
+        text-align: center;
+    }
+    .Footer-Bottom-Content p{
+        width: 80%;
+        margin: 20px auto;
+    }
+    .Footer-Bottom input{
+        width: 70%;
+    }
+    .Footer-Bottom button{
+        margin: 15px 0;
+        width: 70%;
+    }
+}
+@media screen and (max-width:470px) {
+    .Footer-Bottom-Content p{
+        width: 90%;
+    }
+    .Footer-Bottom input{
+        width: 90%;
+    }
+    .Footer-Bottom button{
+        width: 90%;
+    }
+}
+
+
+/*+++++++++++++++++++++++++++++++++++++ End Footer ++++++++++++++++++++++++++++++++++++*/
